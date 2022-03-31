@@ -90,7 +90,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #f8f8f8;
-    color: #121212;
+    color: #dfdfdf;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /* För att göra footern sticky så har vi flex på bodyn och då räcker det med 
@@ -112,6 +112,7 @@ footer {
     padding-left: 1rem;
     padding-right: 1rem;
     width: 100%;
+    background-color: #2e2c26;
 }
 @media (min-width: 36rem) {
     .container {
@@ -171,6 +172,9 @@ footer {
     width: 8rem;
     height: 8rem;
     font-size: 2rem;
+    background-image: url(../img/red\ panda.jpg);
+    background-size: 8rem 8rem;
+    color: #ffffff;
 }
 
 /* #msgbox är elementet som visar sidans toasts, popupmeddelanden
