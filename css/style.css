@@ -89,7 +89,7 @@ select {
 body {
     display: flex;
     flex-direction: column;
-    background-color: #f8f8f8;
+    background-color: #864e0d;
     color: #dfdfdf;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -198,10 +198,12 @@ footer {
  */
 .warning {
     background-color: palevioletred;
+    color: #121212;
 }
 
 .success {
     background-color: mediumspringgreen;
+    color: #121212;
 }
 
 .achievement {
@@ -224,6 +226,7 @@ footer {
 
 .card:hover {
     background-color: #dfdfdf;
+    color: #121212;
 }
 /* klassen används på kortets titel, font-weight: 600 gör fonten fetare, en normal
  * font vikt är oftast 400

@@ -26,7 +26,9 @@ let moneyPerClick = 1;
 let moneyPerSecond = 0;
 let last = 0;
 
-let achievementTest = false;
+let achievementFirst = false;
+let achievementSecond = false;
+
 
 /* Med ett valt element, som knappen i detta fall så kan vi skapa listeners
  * med addEventListener så kan vi lyssna på ett specifikt event på ett html-element
@@ -71,9 +73,14 @@ function step(timestamp) {
     // achievements. Titta dock på upgrades arrayen och gör något rimligare om du
     // vill ha achievements.
     // på samma sätt kan du även dölja uppgraderingar som inte kan köpas
-    if (moneyPerClick == 10 && !achievementTest) {
-        achievementTest = true;
-        message('Du har hittat en FOSSIL!', 'achievement');
+    if (moneyPerClick == 10 && !achievementFirst) {
+        achievementFirst = true;
+        message('Du ser vägen till sann glädje!', 'achievement');
+    }
+
+    if (moneyPerClick == 50 && !achievementSecond) {
+        achievementSecond = true;
+        message('Du har blivit glad!', 'achievement');
     }
 
     window.requestAnimationFrame(step);
@@ -156,7 +163,7 @@ function createCard(upgrade) {
             moneyPerClick++;
             money -= upgrade.cost;
             upgrade.cost *= 1.5;
-            cost.textContent = 'Köp för ' + upgrade.cost + ' Dopamin';
+            cost.textContent = 'Köp för ' + Math.round(upgrade.cost) + ' Dopamin';
             moneyPerSecond += upgrade.amount;
             message('Du har blivit gladare!', 'success');
         } else {
