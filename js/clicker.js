@@ -26,7 +26,6 @@ let moneyPerClick = 1;
 let moneyPerSecond = 0;
 let last = 0;
 
-let x = 0;
 let achievementFirst = false;
 let achievementSecond = false;
 let achievementThird = false;
@@ -86,7 +85,7 @@ function step(timestamp) {
         message('Du har blivit glad!', 'achievement');
     }
 
-    if (x == 1 && !achievementThird) {
+    if (moneyPerSecond >= 100000 && !achievementThird) {
         achievementThird = true;
         message('Du har uppnått sann lycka!', 'achievement');
     }
@@ -146,7 +145,6 @@ upgrades = [
         name: '10 000 Kattbjörnar',
         cost: 1000000,
         amount: 100000,
-        x: 1,
     },
 ];
 

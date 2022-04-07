@@ -91,7 +91,7 @@ body {
     flex-direction: column;
     background-color: #864e0d;
     color: #dfdfdf;
-    font-family: 'Courgette', cursive;
+    font-family: 'Concert One', cursive;
 }
 /* För att göra footern sticky så har vi flex på bodyn och då räcker det med 
  * margin-top auto här.
