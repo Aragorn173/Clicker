@@ -26,8 +26,11 @@ let moneyPerClick = 1;
 let moneyPerSecond = 0;
 let last = 0;
 
+let x = 0;
 let achievementFirst = false;
 let achievementSecond = false;
+let achievementThird = false;
+
 
 
 /* Med ett valt element, som knappen i detta fall så kan vi skapa listeners
@@ -83,6 +86,12 @@ function step(timestamp) {
         message('Du har blivit glad!', 'achievement');
     }
 
+    if (x == 1 && !achievementThird) {
+        achievementThird = true;
+        message('Du har uppnått sann lycka!', 'achievement');
+    }
+
+
     window.requestAnimationFrame(step);
 }
 
@@ -119,14 +128,25 @@ upgrades = [
         amount: 1,
     },
     {
-        name: 'Zoo',
+        name: 'Kattbjörnfamilj',
         cost: 100,
         amount: 10,
     },
     {
-        name: 'Natureservat',
+        name: 'Zoo',
         cost: 1000,
         amount: 100,
+    },
+    {
+        name: 'Natureservat',
+        cost: 100000,
+        amount: 1000,
+    },
+    {
+        name: '10 000 Kattbjörnar',
+        cost: 1000000,
+        amount: 100000,
+        x: 1,
     },
 ];
 
