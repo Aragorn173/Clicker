@@ -87,7 +87,7 @@ function step(timestamp) {
 
     if (moneyPerSecond >= 100000 && !achievementThird) {
         achievementThird = true;
-        message('Du har uppnått sann lycka!', 'achievement');
+        message('Du har uppnått sann glädje!', 'achievement');
     }
 
 
